@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sen:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Sen', sans-serif;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 0 40px;
+    min-width: 1300px;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+input{
+    outline: none;
+}
+
+nav{
+    background: #232536;
+    .container{
+        .nav__wrapper{
+            display: flex;
+            justify-content: space-between;
+            padding: 24px 0;
+            align-items: center;
+            .nav__links{
+                display: flex;
+                align-items: center;
+                gap: 24px;
+                p{
+                color: var(--Light, #FFF);
+                font-family: Inter;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 28px; 
+                }
+
+                button{
+                    color: var(--Black, #232536);
+                    font-family: Sen;
+                    font-size: 18px;
+                    font-style: normal;
+                    margin-left: 24px;
+                    font-weight: 700;
+                    line-height: 24px; 
+                    background: var(--Light, #FFF);
+                    padding: 16px 48px;
+                }
+            }
+        }
+    }
+}
+
+.all__posts__search{
+    margin-top: 64px;
+    .container{
+        .search__wrapper{
+            #all-posts-search{
+                border-radius: 2px;
+                border: 1px solid rgba(109, 110, 118, 0.50);
+                width: 100%;
+                padding: 24px;
+                &::placeholder{
+                    color: var(--Black, #232536);
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 28px; 
+                }
+            }
+        }
+    }
+}
+
+.all__posts{
+    margin-top: 54px;
+    .container{
+        .all__posts__wrapper{
+            h2{
+                color: var(--Black, #232536);
+                font-family: Sen;
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 64px;
+                letter-spacing: -2px;
+            }
+        }
+    }
+}
+
+footer{
+    background: var(--Black, #232536);
+    margin-top: 158px;
+    .container{
+        .footer__wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 82px 0;
+            .footer__links{
+                p{
+                    color: var(--Light, #FFF);
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 28px; 
+                }
+            }
+            .social__medias{
+                display: flex;
+                gap: 26px;
+            }
+        }
+    }
+}
+
+
+.all__posts__card{
+    border-top: 1px solid rgba(109, 110, 118, 0.3);
+    padding-top: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    .card{
+        display: flex;
+        gap: 35px;
+        .img{
+            img{
+                width: 547.295px;
+                height: 318px;
+                object-fit: cover;
+            }
+        }
+
+        .card__content{
+            h3{
+                color: var(--Purple, #592EA9);
+                font-family: Inter;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 20px;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+            }
+
+            h2{
+                max-width: 673px;
+                color: var(--Black, #232536);
+                font-family: Sen;
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 48px; 
+                letter-spacing: -2px;
+            }
+
+            p{
+                max-width: 697px;
+                color: var(--Medium-grey, #6D6E76);
+                font-family: Inter;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 28px; 
+                text-overflow: ellipsis; 
+                overflow: hidden; 
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
+}
