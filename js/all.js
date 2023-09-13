@@ -3,6 +3,7 @@
 let url = 'http://localhost:3000/posts'
 
 async function showPosts(){
+  try{
     let response = await fetch(url)
     let result = await response.json()
     console.log(result);
@@ -23,9 +24,14 @@ async function showPosts(){
         `
     })
     document.querySelector('.all__posts__card').innerHTML = str
+  }catch(err){
+    console.log(err);
+  }
 }
 showPosts()
 
 let search = document.querySelector('#all-posts-search')
 
-search.addEventListener('keyup', )
+// search.addEventListener('keyup', )
+
+// localStorage.setItem('displayCategory', allFunc.toString())
