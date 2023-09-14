@@ -43,7 +43,7 @@ nav .container .nav__wrapper .nav__links {
   align-items: center;
   gap: 24px;
 }
-nav .container .nav__wrapper .nav__links p {
+nav .container .nav__wrapper .nav__links a {
   color: var(--Light, #FFF);
   font-family: Inter;
   font-size: 16px;

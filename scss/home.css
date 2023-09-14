@@ -43,7 +43,7 @@ nav .container .nav__wrapper .nav__links {
   align-items: center;
   gap: 24px;
 }
-nav .container .nav__wrapper .nav__links p {
+nav .container .nav__wrapper .nav__links a {
   color: var(--Light, #FFF);
   font-family: Inter;
   font-size: 16px;
@@ -224,6 +224,7 @@ nav .container .nav__wrapper .nav__links button {
   justify-content: center;
 }
 .category .container .category__wrapper .category__cards {
+  margin-top: 71px;
   display: flex;
   justify-content: space-between;
 }

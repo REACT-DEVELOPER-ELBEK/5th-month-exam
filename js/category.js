@@ -1,6 +1,4 @@
 const url = 'http://localhost:3000/posts'
-// fetch(`http://localhost:3000/users?_page=&{page}&_limit={limit}`);
-
 
 async function business(){
   try{
@@ -29,6 +27,7 @@ async function business(){
   }
 }
 business()
+
 async function startup(){
   try{
     let response = await fetch(`${url}?q=startup`)
@@ -56,6 +55,7 @@ async function startup(){
   }
 }
 startup()
+
 async function economy(){
   try{
     let response = await fetch(`${url}?q=economy`)
@@ -83,6 +83,7 @@ async function economy(){
   }
 }
 economy()
+
 async function technlogogy(){
   try{
     let response = await fetch(`${url}?q=technology`)
@@ -110,3 +111,6 @@ async function technlogogy(){
   }
 }
 technlogogy()
+
+let a = document.querySelector('.categry1')
+console.log(a);
