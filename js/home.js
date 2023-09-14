@@ -2,7 +2,7 @@ let hero = document.querySelector('.hero')
 let heroContent = document.querySelector('.hero__wrapper')
 let latestPosts = document.querySelector('.last__cards')
 
-const url = 'http://localhost:3000/posts'
+let url = 'http://localhost:3000/posts'
 // fetch(`http://localhost:3000/users?_page=&{page}&_limit={limit}`);
 
 
@@ -13,7 +13,6 @@ async function getInfo(){
         let lastImg = res.pop().img
         hero.style.backgroundImage = `url(${lastImg})`
         let lastThree = res.slice(-3)
-        console.log(lastThree);
         let str = ''
         lastThree.map((item) =>{
             str+=`
@@ -37,5 +36,11 @@ async function getInfo(){
     }
 }
 getInfo()
+
+let c1 = document.querySelector('.category1')
+let c2 = document.querySelector('.category2')
+let c3 = document.querySelector('.category3')
+let c4 = document.querySelector('.category4')
+
 
 

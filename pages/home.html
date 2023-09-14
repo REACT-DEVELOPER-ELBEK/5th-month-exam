@@ -58,7 +58,7 @@
             <h2>Choose A Category</h2>
           </div>
           <div class="category__cards">
-            <a class="category1" href="../pages/category.html" onclick="business()">
+            <a id="i1" class="category1" href="../pages/category.html">
               <div class="category__item">
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -71,7 +71,7 @@
             </div>
             </a>
           
-          <a class="category2" href="../pages/category.html" onclick="startup()">
+          <a id="i2" class="category2" href="../pages/category.html" onclick="localStorage.getItem(startup)">
             <div class="category__item">
 
               <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
@@ -97,7 +97,7 @@
           </div>
           </a>
 
-        <a class="category3" href="../pages/category.html" onclick="economy()">
+        <a id="i3" class="category3" href="../pages/category.html">
           <div class="category__item">
 
             <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
@@ -119,7 +119,7 @@
         </div>
         </a>
 
-      <a class="category4" href="../pages/category.html" onclick="technology()">
+      <a onclick="filter(startup)" class="category4" href="../pages/category.html">
         <div class="category__item">
 
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -202,7 +202,6 @@
       </div>
     </footer>
 
-    <script src="../js/home.js"></script>    
-    <script src="../js/category.js"></script>
+    <script src="../js/home.js"></script>   
   </body>
 </html>
