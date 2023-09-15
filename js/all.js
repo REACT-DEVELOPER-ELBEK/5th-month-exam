@@ -1,10 +1,9 @@
 let url = 'http://localhost:3000/posts'
 
-async function showPosts(){
+async function showPosts(page, limit){
   try{
-    let response = await fetch(url)
+    let response = await fetch(`${url}?_page=${page}&_limit=${limit}`)
     let result = await response.json()
-    console.log(result);
     let str = ''
     result.map((item) => {
         str+=`
@@ -21,14 +20,26 @@ async function showPosts(){
       </a>
         `
     })
-    document.querySelector('.all__posts__card').innerHTML = str
+    parent.innerHTML = str
   }catch(err){
     console.log(err);
   }
 }
-showPosts()
+let parent = document.querySelector('.all__posts__card')
+showPosts(1, 5)
 
+document.querySelector('#arr1').addEventListener('click', ()=>{
+  parent.innerHTML = showPosts(1, 5)
+})
 
-function goPost(btnID){
- console.log(btnID);
-}
+document.querySelector('#arr-left').addEventListener('click', ()=>{
+  parent.innerHTML = showPosts(1, 5)
+})
+
+document.querySelector('#arr2').addEventListener('click', ()=>{
+  parent.innerHTML = showPosts(2, 5)
+})
+
+document.querySelector('#arr-right').addEventListener('click', ()=>{
+  parent.innerHTML = showPosts(2, 5)
+})
