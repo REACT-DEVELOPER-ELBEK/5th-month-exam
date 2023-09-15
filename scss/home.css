@@ -32,6 +32,10 @@ input {
 }
 
 nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
   background: #232536;
 }
 nav .container .nav__wrapper {
@@ -52,6 +56,23 @@ nav .container .nav__wrapper .nav__links a {
   font-style: normal;
   font-weight: 400;
   line-height: 28px;
+}
+nav .container .nav__wrapper .nav__links a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #FFF;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+nav .container .nav__wrapper .nav__links a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
 }
 nav .container .nav__wrapper .nav__links button {
   color: var(--Black, #232536);
@@ -129,6 +150,10 @@ nav .container .nav__wrapper .nav__links button {
   margin-top: 48px;
   padding: 16px 48px;
   background: var(--Yellow, #FFD050);
+}
+.hero .container .hero__wrapper a button:hover {
+  box-shadow: -10px 13px 3px 2px rgba(34, 60, 80, 0.78);
+  transition: 0.3s;
 }
 
 .last {
@@ -290,6 +315,7 @@ footer .container .footer__wrapper .social__medias {
 
 .modal__window {
   display: none;
+  margin-top: 80px;
 }
 .modal__window .modal {
   background: var(--Lavender, #F4F0F8);
@@ -304,8 +330,26 @@ footer .container .footer__wrapper .social__medias {
   position: absolute;
   left: 30px;
   top: 40px;
-  font-size: 22px;
+  font-size: 32px;
   cursor: pointer;
+  font-weight: 600;
+}
+.modal__window .modal .container .modal__wrapper .modal__back::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #18272F;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.modal__window .modal .container .modal__wrapper .modal__back:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
 }
 .modal__window .modal .container .modal__wrapper h2 {
   color: var(--Black, #232536);
@@ -378,6 +422,10 @@ footer .container .footer__wrapper .social__medias {
 .modal__window .cards .card {
   display: flex;
   gap: 35px;
+}
+.modal__window .cards .card:hover {
+  box-shadow: -16px 19px 11px -1px rgba(34, 60, 80, 0.78);
+  transition: 0.3s;
 }
 .modal__window .cards .card .img img {
   width: 547.295px;

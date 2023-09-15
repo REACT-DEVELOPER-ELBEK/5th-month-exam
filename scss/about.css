@@ -30,6 +30,10 @@ input {
 }
 
 nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
   background: #232536;
 }
 nav .container .nav__wrapper {
@@ -50,6 +54,23 @@ nav .container .nav__wrapper .nav__links a {
   font-style: normal;
   font-weight: 400;
   line-height: 28px;
+}
+nav .container .nav__wrapper .nav__links a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #18272F;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+nav .container .nav__wrapper .nav__links a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
 }
 nav .container .nav__wrapper .nav__links button {
   color: var(--Black, #232536);
@@ -104,6 +125,9 @@ nav .container .nav__wrapper .nav__links button {
   margin-top: 16px;
 }
 
+.creative {
+  margin-top: 122px;
+}
 .creative .container .creative__wrapper {
   display: flex;
   align-items: center;
