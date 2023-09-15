@@ -1,50 +1,5 @@
 let url = 'http://localhost:3000/posts'
 
-async function showPosts(page, limit){
-  try{
-    let response = await fetch(`${url}?_page=${page}&_limit=${limit}`)
-    let result = await response.json()
-    let str = ''
-    result.map((item, id) => {
-        str+=`
-        <a id="id${++id}" href="../pages/detail.html">
-        <div class="card">
-        <div class="img"><img src='${item.img}' alt="" width: 547.295px;
-        height: 318px;></div>
-        <div class="card__content">
-          <h3>${item.category}</h3>
-          <h2>${item.title}</h2>
-          <p>${item.description}</p>
-        </div>
-      </div>
-      </a>
-        `
-    })
-    parent.innerHTML = str
-  }catch(err){
-    console.log(err);
-  }
-}
-
-let parent = document.querySelector('.all__posts__card')
-showPosts(1, 5)
-
-document.querySelector('#arr1').addEventListener('click', ()=>{
-  parent.innerHTML = showPosts(1, 5)
-})
-
-document.querySelector('#arr-left').addEventListener('click', ()=>{
-  parent.innerHTML = showPosts(1, 5)
-})
-
-document.querySelector('#arr2').addEventListener('click', ()=>{
-  parent.innerHTML = showPosts(2, 5)
-})
-
-document.querySelector('#arr-right').addEventListener('click', ()=>{
-  parent.innerHTML = showPosts(2, 5)
-})
-
 async function post1(){
   try{
     let response = await fetch(`${url}/31241`)
@@ -69,7 +24,7 @@ async function post1(){
     console.log(err);
   }
 }
-// post1()
+post1()
 
 async function post2(){
   try{
@@ -168,7 +123,7 @@ async function post5(){
                     <p>${result.description}</p>
                 </div>
         `
-    document.querySelector('.modal__wrapper').innerHTML = str
+    document.querySelector('.detail__wrapper').innerHTML = str
   }catch(err){
     console.log(err);
   }
@@ -304,10 +259,3 @@ async function post8(){
     }
   }
   // post10()
-  function arr(category){
-    [].pop(category())
-  }
-  let id1 = document.querySelector('#id1')
-id1.addEventListener('click', ()=>{
-  arr(post1)
-})
