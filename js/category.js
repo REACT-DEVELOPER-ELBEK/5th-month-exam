@@ -121,18 +121,9 @@ function arr(category){
   [].pop(category())
 }
 arr(business)
-// import{c1, c2, c3, c4} from "./home.js"
-// console.log(c1);
-// console.log(c2);
-// console.log(c3);
-// console.log(c4);
-// c1.addEventListener('click', arr(business))
-// c2.addEventListener('click', arr(startup))
-// c3.addEventListener('click', arr(economy))
-// c4.addEventListener('click', arr(technlogy))
 
-// let search = document.querySelector('#all-posts-search').value
-// search.addEventListener('keyup', )
+let searchIput = document.querySelector('#all-posts-search')
+search.addEventListener('mouseleave', search(searchIput.value))
 
 async function search(val){
   try{
@@ -160,4 +151,3 @@ async function search(val){
     console.log(err);
   }
 }
-search('need')

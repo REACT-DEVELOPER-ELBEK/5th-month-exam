@@ -37,10 +37,157 @@ async function getInfo(){
 }
 getInfo()
 
-let c1 = document.querySelector('.category1')
-let c2 = document.querySelector('.category2')
-let c3 = document.querySelector('.category3')
-let c4 = document.querySelector('.category4')
 
+async function business(){
+  try{
+    let response = await fetch(`${url}?q=business`)
+    let result = await response.json()
+    console.log(result);
+    let str = ''
+    result.map((item) => {
+        str+=`
+        <a href="#">
+        <div class="card">
+        <div class="img"><img src='${item.img}' alt="" width: 547.295px;
+        height: 318px;></div>
+        <div class="card__content">
+          <h3>${item.category}</h3>
+          <h2>${item.title}</h2>
+          <p>${item.description}</p>
+        </div>
+      </div>
+      </a>
+        `
+    })
+    document.querySelector('.cards').innerHTML = str
+  }catch(err){
+    console.log(err);
+  }
+}
 
+async function startup(){
+  try{
+    let response = await fetch(`${url}?q=startup`)
+    let result = await response.json()
+    console.log(result);
+    let str = ''
+    result.map((item) => {
+        str+=`
+        <a href="#">
+        <div class="card">
+        <div class="img"><img src='${item.img}' alt="" width: 547.295px;
+        height: 318px;></div>
+        <div class="card__content">
+          <h3>${item.category}</h3>
+          <h2>${item.title}</h2>
+          <p>${item.description}</p>
+        </div>
+      </div>
+      </a>
+        `
+    })
+    document.querySelector('.cards').innerHTML = str
+  }catch(err){
+    console.log(err);
+  }
+}
 
+async function economy(){
+  try{
+    let response = await fetch(`${url}?q=economy`)
+    let result = await response.json()
+    console.log(result);
+    let str = ''
+    result.map((item) => {
+        str+=`
+        <a href="#">
+        <div class="card">
+        <div class="img"><img src='${item.img}' alt="" width: 547.295px;
+        height: 318px;></div>
+        <div class="card__content">
+          <h3>${item.category}</h3>
+          <h2>${item.title}</h2>
+          <p>${item.description}</p>
+        </div>
+      </div>
+      </a>
+        `
+    })
+    document.querySelector('.cards').innerHTML = str
+  }catch(err){
+    console.log(err);
+  }
+}
+
+async function technlogy(){
+  try{
+    let response = await fetch(`${url}?q=technology`)
+    let result = await response.json()
+    console.log(result)
+    let str = ''
+    result.map((item) => {
+        str+=`
+        <a href="#">
+        <div class="card">
+        <div class="img"><img src='${item.img}' alt="" width: 547.295px;
+        height: 318px;></div>
+        <div class="card__content">
+          <h3>${item.category}</h3>
+          <h2>${item.title}</h2>
+          <p>${item.description}</p>
+        </div>
+      </div>
+      </a>
+        `
+    })
+    document.querySelector('.cards').innerHTML = str
+  }catch(err){
+    console.log(err);
+  }
+}
+
+function arr(category){
+  [].pop(category())
+}
+
+document.querySelector('#i1').addEventListener('click', ()=>{
+  document.querySelector('.hero').style.display = 'none'
+  document.querySelector('.last').style.display = 'none'
+  document.querySelector('.category').style.display = 'none'
+  document.querySelector('.modal__window').style.display = 'block'
+  arr(business)
+})
+
+document.querySelector('#i2').addEventListener('click', ()=>{
+  document.querySelector('.hero').style.display = 'none'
+  document.querySelector('.last').style.display = 'none'
+  document.querySelector('.category').style.display = 'none'
+  document.querySelector('.modal__window').style.display = 'block'
+  arr(startup)
+  document.querySelector('.modal__title').innerHTML = 'Startup'
+  document.querySelector('#modal-link-cur').innerHTML = 'Startup'
+})
+
+document.querySelector('#i3').addEventListener('click', ()=>{
+  document.querySelector('.hero').style.display = 'none'
+  document.querySelector('.last').style.display = 'none'
+  document.querySelector('.category').style.display = 'none'
+  document.querySelector('.modal__window').style.display = 'block'
+  arr(economy)
+  document.querySelector('.modal__title').innerHTML = 'Economy'
+  document.querySelector('#modal-link-cur').innerHTML = 'economy'
+})
+
+document.querySelector('#i4').addEventListener('click', ()=>{
+  document.querySelector('.hero').style.display = 'none'
+  document.querySelector('.last').style.display = 'none'
+  document.querySelector('.category').style.display = 'none'
+  document.querySelector('.modal__window').style.display = 'block'
+  arr(technlogy)
+  document.querySelector('.modal__title').innerHTML = 'Technology'
+  document.querySelector('#modal-link-cur').innerHTML = 'Technology'
+})
+
+document.querySelector('.modal__back').addEventListener('click', ()=>{
+  location.reload()
+})

@@ -1,5 +1,3 @@
-// const axios = require("axios");
-
 let url = 'http://localhost:3000/posts'
 
 async function showPosts(){
@@ -10,7 +8,7 @@ async function showPosts(){
     let str = ''
     result.map((item) => {
         str+=`
-        <a href="#">
+        <a onclick="goPost(${item.id})" href="../pages/post.html">
         <div class="card">
         <div class="img"><img src='${item.img}' alt="" width: 547.295px;
         height: 318px;></div>
@@ -30,8 +28,7 @@ async function showPosts(){
 }
 showPosts()
 
-let search = document.querySelector('#all-posts-search')
 
-// search.addEventListener('keyup', )
-
-// localStorage.setItem('displayCategory', allFunc.toString())
+function goPost(btnID){
+ console.log(btnID);
+}

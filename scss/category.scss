@@ -67,10 +67,10 @@ nav{
     }
 }
 
-.hero{
+.modal{
     background: var(--Lavender, #F4F0F8);
     .container{
-        .hero__wrapper{
+        .modal__wrapper{
             display: grid;
             place-items: center;
             padding: 80px 282px;
@@ -98,7 +98,7 @@ nav{
                 width: 515px;
             }
 
-            .hero__links{
+            .modal__links{
                 a{
                     color: var(--Black, #232536);
                     text-align: center;

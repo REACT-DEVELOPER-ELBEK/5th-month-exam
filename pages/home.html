@@ -58,7 +58,7 @@
             <h2>Choose A Category</h2>
           </div>
           <div class="category__cards">
-            <a id="i1" class="category1" href="../pages/category.html">
+            <button id="i1" class="category1" >
               <div class="category__item">
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -69,9 +69,9 @@
                 <h2>Business</h2>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
             </div>
-            </a>
+            </button>
           
-          <a id="i2" class="category2" href="../pages/category.html" onclick="localStorage.getItem(startup)">
+          <button id="i2" class="category2">
             <div class="category__item">
 
               <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
@@ -95,9 +95,9 @@
               <h2>Startup</h2>
               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
           </div>
-          </a>
+          </button>
 
-        <a id="i3" class="category3" href="../pages/category.html">
+        <button id="i3" class="category3">
           <div class="category__item">
 
             <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
@@ -117,9 +117,9 @@
             <h2>Economy</h2>
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
         </div>
-        </a>
+        </button>
 
-      <a onclick="filter(startup)" class="category4" href="../pages/category.html">
+      <button id="i4" class="category4">
         <div class="category__item">
 
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -138,7 +138,35 @@
           <h2>Technology</h2>
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
       </div>
-      </a>
+      </button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="modal__window">
+      <div class="modal">
+        <div class="container">
+          <div class="modal__wrapper">
+            <div class="modal__back">&#60; Back</div>
+            <h1 class="modal__title">Business</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            <div class="modal__links"><a href="">Blog</a> &#62; <a id="modal-link-cur" href="">Business</a></div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="all__posts__search">
+        <div class="container">
+          <div class="search__wrapper">
+            <input type="search" name="search" id="all-posts-search" placeholder="Searching ...">
+          </div>
+        </div>
+      </div>
+  
+      <div class="categoty__card">
+        <div class="container">
+          <div class="cards"></div>
         </div>
       </div>
     </div>
@@ -202,6 +230,6 @@
       </div>
     </footer>
 
-    <script src="../js/home.js"></script>   
+    <script src="../js/home.js"></script>
   </body>
 </html>

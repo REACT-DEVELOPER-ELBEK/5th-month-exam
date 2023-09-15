@@ -63,15 +63,15 @@ nav .container .nav__wrapper .nav__links button {
   padding: 16px 48px;
 }
 
-.hero {
+.modal {
   background: var(--Lavender, #F4F0F8);
 }
-.hero .container .hero__wrapper {
+.modal .container .modal__wrapper {
   display: grid;
   place-items: center;
   padding: 80px 282px;
 }
-.hero .container .hero__wrapper h2 {
+.modal .container .modal__wrapper h2 {
   color: var(--Black, #232536);
   text-align: center;
   font-family: Sen;
@@ -81,7 +81,7 @@ nav .container .nav__wrapper .nav__links button {
   line-height: 64px;
   letter-spacing: -2px;
 }
-.hero .container .hero__wrapper p {
+.modal .container .modal__wrapper p {
   text-align: center;
   color: var(--Medium-grey, #6D6E76);
   text-align: center;
@@ -92,7 +92,7 @@ nav .container .nav__wrapper .nav__links button {
   line-height: 28px;
   width: 515px;
 }
-.hero .container .hero__wrapper .hero__links a {
+.modal .container .modal__wrapper .modal__links a {
   color: var(--Black, #232536);
   text-align: center;
   font-family: Inter;
